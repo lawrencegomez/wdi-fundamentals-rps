@@ -4,7 +4,7 @@
 'use strict';
 
 function getInput() {
-    console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    console.log("Please choose either 'rock', 'paper', or 'scissors'.");
     return prompt();
 }
 function randomPlay() {
@@ -25,14 +25,21 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    if (move !== null) {
+        move === move;
+    } else 
+        return getInput();
 }
 
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    if (move !== null) { 
+        move === move; 
+    } else 
+        return randomPlay();
+    
 }
 
 function getWinner(playerMove,computerMove) {
@@ -40,7 +47,39 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    /* YOUR CODE HERE */
+    if (playerMove === "rock") {
+        if (computerMove === "paper") {
+            winner === playerMove;
+        }
+    }
+    if (playerMove === "rock") {
+        if (computerMove === "scissors") {
+            winner === playerMove;
+        }
+    }
+    if (playerMove === "scissors") {
+        if (computerMove === "rock") {
+            winner === computerMove;
+        }
+    }
+    if (playerMove === "scissors") {
+        if (computerMove === "paper") {
+            winner === playerMove;
+        }
+    }
+    if (playerMove === "paper") {
+        if (computerMove === "scissors") {
+            winner === computerMove;
+        }
+    }   
+    if (playerMove === "paper") {
+        if (computerMove === "rock") {
+            winner === playerMove; 
+        }
+    } 
+    if (playerMove === computerMove) {
+        return winner = prompt ("It's a tie");
+    }
     return winner;
 }
 
